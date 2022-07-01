@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  head
+    link(rel='stylesheet', href='/stylesheets/error.css')
+  h1= message
+  h2= error.status
+  pre #{error.stack}

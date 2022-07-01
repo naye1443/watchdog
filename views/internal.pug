@@ -1,0 +1,138 @@
+extends layout
+
+block content
+  head
+    link(rel='stylesheet', href='/stylesheets/internal.css')
+    script(src='/javascripts/internal.js' defer)
+  .communication-container
+    .internal-message-container
+      .internal-message-header
+        | Internal Messages
+      hr
+      .internal-messages
+        .internal-message-card
+          .internal-message-grid
+            .internal-message-module
+              .message-author
+                | [2022-06-27][14:53] ECC:
+              .message-body
+                | This is a test of the emergency broadcasting system. This is only a test.
+                | This is a test of the emergency broadcasting system. This is only a test.
+            hr
+            .internal-message-module
+              .message-author
+                | [2022-06-27][14:53] ECC:
+              .message-body
+                | This is a test of the emergency broadcasting system. This is only a test.
+                | This is a test of the emergency broadcasting system. This is only a test.
+            hr
+            .internal-message-module
+              .message-author
+                | [2022-06-27][14:53] ECC:
+              .message-body
+                | This is a test of the emergency broadcasting system. This is only a test.
+                | This is a test of the emergency broadcasting system. This is only a test.
+        .internal-message-card
+          .text-input-module
+            form.message-form(action='_self' method='post' autocomplete='off')
+              label(for='message-name') Name:
+              input#message-name(type='text' name='message-name')
+              label(for='message-text') Message:
+              textarea#message-text(name='message-text')
+            button(type='submit')
+              | Submit Message
+    .submit-ticket-container
+      .submit-ticket-header
+        | Submit a Ticket
+      hr
+      .submit-ticket
+        .submit-ticket-card
+          .text-input-module
+            form.ticket-form(action='_self' method='post' autocomplete='off')
+              label(for='ticket-email') Email:
+              input#ticket-email(type='text' name='ticket-email')
+              label(for='ticket-drn') Product DRN:
+              input#ticket-drn(type='text' name='ticket-drn')
+              label(for='ticket-title') Title:
+              input#ticket-title(type='text' name='ticket-title')
+              label(for='ticket-text') Message:
+              textarea#ticket-text(name='ticket-text')
+            button(type='submit')
+              | Submit Ticket
+  .tickets-container
+    .tickets-header
+      | Customer Tickets
+    hr
+    .tickets
+      .ticket-card
+        .ticket-info
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
+          .ticket-module
+            .ticket-header
+              | Company Name:
+            .ticket-amount
+              | 42 Tickets
