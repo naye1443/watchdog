@@ -31,7 +31,7 @@
 
 .category-info {
   display: grid;
-  grid-template: 1fr / repeat(2, 1fr);
+  grid-template: 1fr / repeat(4, 1fr);
   margin: 1em;
   gap: .75em;
 }
@@ -57,13 +57,14 @@
 }
 
 .status-module {
-  :hover {
+  &:hover {
     background-color: #D6D6D6;
     cursor: pointer;
   }
-  svg {
+  > svg {
     color: #74AA50;
     height: 1.2em;
+    flex-shrink: 0;
     width: auto;
   }
   display: flex;
@@ -100,7 +101,7 @@ hr {
 }
 
 .module-container {
-  :hover {
+  &:hover {
     background-color: #f7f7f788;
     cursor: pointer;
   }
