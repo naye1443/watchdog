@@ -2,7 +2,7 @@ extends layout
 
 block content
   head
-    link(rel='stylesheet', href='/stylesheets/index.css')
+    link(rel='stylesheet', href='/stylesheets/css/index.css')
     //- script(src='/javascripts/index.js' defer)
   .status-container
     .status-header
@@ -59,41 +59,41 @@ block content
     a(class='twitter-timeline' data-theme='light' data-height='500' href='https://twitter.com/DunBradstreet?ref_src=twsrc%5Etfw')
     script(async src="https://platform.twitter.com/widgets.js" charSet="utf-8")
   //.info-card
-    //.trending-header
-    //  | Trending
-    //hr
-    //.trending-unit
-    //  svg(viewbox='0 0 24 24')
-    //    path(fill='currentColor' d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 \
-    //              10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 \
-    //              0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 \
-    //              2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z')
-    //  .trending-info
-    //    .module-header
-    //      | @asdf
-    //    .module-text
-    //      | Diam vel quam elementum pulvinar...
-    //hr
-    //.trending-unit
-    //  svg(viewbox='0 0 24 24')
-    //    path(fill='currentColor' d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 \
-    //              10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 \
-    //              0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 \
-    //              2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z')
-    //  .trending-info
-    //    .module-header
-    //      | @asdf
-    //    .module-text
-    //      | Sed risus ultricies tristique nulla aliquet enim tortor at auctor...
-    //hr
-    //.trending-unit
-    //  svg(viewbox='0 0 24 24')
-    //    path(fill='currentColor' d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 \
-    //              10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 \
-    //              0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 \
-    //              2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z')
-    //  .trending-info
-    //    .module-header
-    //      | @asdf
-    //    .module-text
-    //      | Mattis vulputate enim nulla aliquet porttitor...
+  //  .trending-header
+  //    | Trending
+  //  hr
+  //  .trending-unit
+  //    svg(viewbox='0 0 24 24')
+  //      path(fill='currentColor' d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 \
+  //                10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 \
+  //                0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 \
+  //                2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z')
+  //    .trending-info
+  //      .module-header
+  //        | @asdf
+  //      .module-text
+  //        | Diam vel quam elementum pulvinar...
+  //  hr
+  //  .trending-unit
+  //    svg(viewbox='0 0 24 24')
+  //      path(fill='currentColor' d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 \
+  //                10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 \
+  //                0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 \
+  //                2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z')
+  //    .trending-info
+  //      .module-header
+  //        | @asdf
+  //      .module-text
+  //        | Sed risus ultricies tristique nulla aliquet enim tortor at auctor...
+  //  hr
+  //  .trending-unit
+  //    svg(viewbox='0 0 24 24')
+  //      path(fill='currentColor' d='M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 \
+  //                10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 \
+  //                0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 \
+  //                2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z')
+  //    .trending-info
+  //      .module-header
+  //        | @asdf
+  //      .module-text
+  //        | Mattis vulputate enim nulla aliquet porttitor...
