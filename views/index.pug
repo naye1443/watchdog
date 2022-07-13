@@ -9,24 +9,21 @@ block content
       | Product Status
     hr
     .categories
-      each category in db
-        .category-card
-          .category-header
-            div= category.categoryName
-          .category-info
-            each product in category.products
-              case product.status
-                when 0
-                  - statusColor = '#74AA50'
-                when 1
-                  - statusColor = '#BC2C2C'
-                when 2
-                  - statusColor = '#E6A65D'
-              .status-module
-                svg(viewbox='0 0 24 24')
-                  path(fill=statusColor, d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z')
-                .status-text
-                  div= product.name
+      .category-card
+        .category-info
+          each product in db
+            case product.status
+              when 'NOT_ALERTING'
+                - statusColor = '#74AA50'
+              when 'CRITICAL'
+                - statusColor = '#BC2C2C'
+              when 'WARNING'
+                - statusColor = '#E6A65D'
+            .status-module
+              svg(viewbox='0 0 24 24')
+                path(fill=statusColor, d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z')
+              .status-text
+                div= product.name
   .info-card
     .alerts-header
       | Alerts
