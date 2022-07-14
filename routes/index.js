@@ -1,9 +1,9 @@
 const express = require('express');
-const main = require('../graphql/graphql.js');
+const output = require('../graphql/graphql.js');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  main().then((obj) => {
+  output().then((obj) => {
     res.render('index', { title: 'Status', db: obj });
   });
 });
