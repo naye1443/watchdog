@@ -1,6 +1,6 @@
 const { GraphQLClient, gql } = require('graphql-request');
-
-const entity = {};
+const fs = require('fs');
+const path = require('path');
 
 const main = async () => {
   const endpoint = 'https://api.newrelic.com/graphql';
@@ -11,19 +11,13 @@ const main = async () => {
     },
   });
 
-  const guidList = [
-    "MTI3NzU0MXxTWU5USHxNT05JVE9SfDNiN2MzYTViLTAyM2QtNGY4Mi1hMGZmLWVhZmMwOTA0N2NkMA",
-    "MTI3NzU0MXxTWU5USHxNT05JVE9SfGRlZDRkNGEzLTVjNzktNDc5OC1hMjdkLWQ3ZWMyZWE1NWM5Nw",
-    "MTI3NzU0MXxTWU5USHxNT05JVE9SfGJlNzA2ZjFmLTMzODQtNGIzMS05ZGNjLWViNDNjYjliZDEzOA",
-    "MTI3NzU0MXxTWU5USHxNT05JVE9SfDA2Y2I4OGZjLTcyZDctNGE0Zi1hNGQyLWU0YTllODkzNzNlZA",
-    "MTI3NzU0MXxTWU5USHxNT05JVE9SfDliNzQ2MThmLTA3ZDEtNDQxYi1hNjRmLWQzNzFmYjJiMDAwYg",
-  ];
-
-  for (let i = 0; i < guidList.length; i++) {
+  const guidList = JSON.parse(fs.readFileSync(path.resolve(__dirname, './guidlist.json'), 'utf-8'));
+  const entity = {};
+  for (const [key, value] of Object.entries(guidList)) {
     const query = gql`
       {
         actor {
-          entity(guid: "${guidList[i]}") {
+          entity(guid: "${value.guid}") {
             alertSeverity
             name
             reporting
@@ -34,9 +28,9 @@ const main = async () => {
       }
     `
     const data = await graphQLClient.request(query);
-    entity[i] = {
-      guid: guidList[i],
-      name: data.actor.entity.name,
+    entity[key] = {
+      guid: value.guid,
+      name: value.name,
       status: data.actor.entity.alertSeverity,
     };
   }
