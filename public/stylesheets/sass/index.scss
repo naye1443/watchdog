@@ -31,7 +31,7 @@
 
 .category-info {
   display: grid;
-  grid-template: 1fr / repeat(4, 1fr);
+  grid-template: 1fr / repeat(auto-fit, minmax(220px, 1fr));
   margin: 1em;
   gap: .75em;
 }
