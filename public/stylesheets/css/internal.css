@@ -59,7 +59,6 @@
   padding: 0.25em;
   gap: 0.5em;
 }
-
 .ticket-module:hover {
   background-color: #D6D6D6;
   cursor: pointer;
@@ -141,7 +140,6 @@ hr {
   padding: 0.25em;
   gap: 0.5em;
 }
-
 .internal-message-module:hover {
   background-color: #D6D6D6;
   cursor: pointer;
@@ -154,39 +152,6 @@ hr {
   padding: 1em;
   gap: 1em;
 }
-
-.message-form,
-.ticket-form {
-  display: grid;
-  grid-template: repeat(4, auto)/1fr;
-  width: 100%;
-  gap: 0.5em;
-}
-
-.message-form > label,
-.ticket-form > label {
-  justify-self: start;
-}
-
-.message-form > input,
-.ticket-form > input,
-.message-form > textarea,
-.ticket-form > textarea {
-  color: rgba(33, 37, 41, 0.8980392157);
-  background-color: #F7F7F7;
-  font-size: 1.1em;
-  width: 100%;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5em;
-}
-
-.message-form > textarea,
-.ticket-form > textarea {
-  height: 8em;
-  resize: none;
-}
-
 .text-input-module > button {
   color: #F7F7F7;
   background-color: #005172;
@@ -197,9 +162,37 @@ hr {
   padding: 1em 2em;
   cursor: pointer;
 }
-
 .text-input-module > button:hover:not(:active) {
   background-color: rgba(0, 82, 114, 0.9176470588);
+}
+
+.message-form,
+.ticket-form {
+  display: grid;
+  grid-template: repeat(4, auto)/1fr;
+  width: 100%;
+  gap: 0.5em;
+}
+.message-form > label,
+.ticket-form > label {
+  justify-self: start;
+}
+.message-form > input,
+.message-form > textarea,
+.ticket-form > input,
+.ticket-form > textarea {
+  color: rgba(33, 37, 41, 0.8980392157);
+  background-color: #F7F7F7;
+  font-size: 1.1em;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em;
+}
+.message-form > textarea,
+.ticket-form > textarea {
+  height: 8em;
+  resize: none;
 }
 
 /*# sourceMappingURL=internal.css.map */
