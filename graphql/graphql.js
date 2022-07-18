@@ -21,7 +21,7 @@ const query = async (guid) => {
         }
       }
     }
-  `
+  `;
 
   return graphQLClient.request(schema);
 }
