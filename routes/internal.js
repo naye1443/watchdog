@@ -10,11 +10,12 @@ router.get('/', (req, res, next) => {
 router.post('/', function (req,res){
 
   // stringifies the output from the req
+  console.log(req);
   _starTime_str = JSON.stringify(req._startTime);
   body = JSON.stringify(req.body);
 
   if (fs.existsSync("../logfiles/log.txt")){
-    fs.appendFile("../logfiles/log.txt",`${_starTime_str}\n${body}\n---------------------------------------\n` , function(err){
+    fs.appendFile("../logfiles/log.txt",`UTC Time Zone: ${_starTime_str}\n${body}\n---------------------------------------\n` , function(err){
       if (err) throw err;
       console.log("file already exists, appending...");
     });
