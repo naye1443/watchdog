@@ -4,11 +4,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+// storing relative file paths to routes
 const indexRouter = require('./routes/index');
 const internalRouter = require('./routes/internal');
 const loginRouter = require('./routes/login');
 
-const app = express();
+const app = express();  // creates an expess object
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// sets up routes to different views
 app.use('/', indexRouter);
 app.use('/internal', internalRouter);
 app.use('/login', loginRouter);
@@ -39,5 +41,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;

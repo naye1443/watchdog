@@ -48,16 +48,16 @@ block content
       .submit-ticket
         .submit-ticket-card
           .text-input-module
-            form.ticket-form(action='_self' method='post' autocomplete='off')
+            form.ticket-form(action='/internal' method='POST' autocomplete='off')
               label(for='ticket-email') Email:
-              input#ticket-email(type='text' name='ticket-email')
+              input#ticket-email(type='text' name='ticket-email') 
               label(for='ticket-drn') Product DRN:
               input#ticket-drn(type='text' name='ticket-drn')
               label(for='ticket-title') Title:
               input#ticket-title(type='text' name='ticket-title')
               label(for='ticket-text') Message:
               textarea#ticket-text(name='ticket-text')
-            button(type='submit')
+            button.ticket-submit(type='submit')
               | Submit Ticket
   .tickets-container
     .tickets-header
