@@ -1,3 +1,4 @@
+//this gets ticket input form
 const ticket_input = document.querySelectorAll('form.ticket-form > input');
 
 const ticket_text = document.getElementById("ticket-text");

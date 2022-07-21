@@ -8,6 +8,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const internalRouter = require('./routes/internal');
 const loginRouter = require('./routes/login');
+const externalTicketForm = require('./routes/externalform');
 
 const app = express();  // creates an expess object
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/internal', internalRouter);
 app.use('/login', loginRouter);
+app.use('/externalform', externalTicketForm);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

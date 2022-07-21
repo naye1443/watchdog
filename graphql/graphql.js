@@ -5,6 +5,7 @@ const path = require('path');
 const query = async (guid) => {
   const endpoint = 'https://api.newrelic.com/graphql';
 
+  // this is api key, used to log into newrelic
   const graphQLClient = new GraphQLClient(endpoint, {
     headers: {
       'Api-Key': 'NRAK-VF1VLJF6GJB8WJQJA9SG6CWJKQQ',
